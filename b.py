@@ -51,11 +51,12 @@ async def clean(client: Client, message: Message):
                 await app.unban_chat_member(chat_id=group_id, user_id=joiner.user.id)
                 count += 1
 
-        running = False
-        count = 0
         await client.send_message(chat_id=group_id, text=f'已清理 <code>{count}</code> 用户',
                                   parse_mode=parse_mode.ParseMode.HTML)
+        running = False
+        count = 0
     except Exception as e:
+        await client.send_message(chat_id=group_id, text=f'运行发生错误')
         running = False
         count = 0
 
