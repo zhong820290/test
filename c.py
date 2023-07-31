@@ -57,8 +57,8 @@ async def clean(client: Client, message: Message):
         return
 
     group_id = message.chat.id
-    # await client.send_message(chat_id=group_id, text=f'正在清理...',
-    #                           parse_mode=parse_mode.ParseMode.HTML)
+    await client.send_message(chat_id=group_id, text=f'正在清理...',
+                              parse_mode=parse_mode.ParseMode.HTML)
 
     try:
 
