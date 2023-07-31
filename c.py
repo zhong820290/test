@@ -10,6 +10,7 @@ load_dotenv()
 
 api_id = os.getenv('api_id')
 api_hash = os.getenv('api_hash')
+session = os.getenv('session')
 
 if api_id is None or api_hash is None:
     print('api参数错误,请修改.env文件中的参数')
@@ -21,7 +22,7 @@ if api_id is None or api_hash is None:
 #     "port": 7890
 # }
 
-app = Client("test", api_id=api_id, api_hash=api_hash)
+app = Client(session, api_id=api_id, api_hash=api_hash)
 count = 0
 running = False
 
