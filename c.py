@@ -37,14 +37,14 @@ async def clean(client: Client, message: Message):
         await asyncio.sleep(5)  # 等待5秒
         await res.delete()
         return
-    running = True
+    
     try:
         chat_member = await client.get_chat_member(chat_id=message.chat.id, user_id=message.from_user.id)
 
         p = chat_member.status.value
 
         if p == 'owner' or p == 'administrator':
-            pass
+            running = True
         else:
             res = await message.reply("错误：您尚未拥有权限")
             await asyncio.sleep(5)  # 等待5秒
