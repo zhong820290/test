@@ -16,12 +16,12 @@ if api_id is None or api_hash is None or session is None:
     print('api参数错误和session参数错误,请修改.env文件中的参数')
     exit()
 
-proxy = {
-    "scheme": "socks5",  # "socks4", "socks5" and "http" are supported
-    "hostname": "127.0.0.1",
-    "port": 7890
-}
-app = Client(session, api_id=api_id, api_hash=api_hash, proxy=proxy)
+# proxy = {
+#     "scheme": "socks5",  # "socks4", "socks5" and "http" are supported
+#     "hostname": "127.0.0.1",
+#     "port": 7890
+# }
+app = Client(session, api_id=api_id, api_hash=api_hash)
 count_deleted = 0
 running = False
 count_running = 0
