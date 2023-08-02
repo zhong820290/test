@@ -27,10 +27,10 @@ with open('id', 'r', encoding='utf-8') as file:
 app = Client(session, api_id=api_id, api_hash=api_hash)
 count_deleted = 0
 running = False
-count_running = 0
+count_running = 1
 
 groups = {-1001464555457, -1001438560068, -1001353656864, -1001416676398, -1001549263396, -1001518421010,
-          -1001518421010, -1001440784384}
+          -1001518421010, -1001440784384,-1001540550248}
 
 
 async def ban_all(group_id):
