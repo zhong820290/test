@@ -159,6 +159,7 @@ async def clean(client: Client, message: Message):
 
     count_deleted = 0
     count_running = 1
+    
     for group in groups:
         print(f'正在检查第 {count_running} 个群')
         await app.send_message(chat_id=group,
@@ -170,6 +171,7 @@ async def clean(client: Client, message: Message):
     running = False
     count_deleted = 0
     count_running = 0
+    deleted_user.clear()
 
 
 app.run()
