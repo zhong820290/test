@@ -22,7 +22,7 @@ proxy = {
     "hostname": "127.0.0.1",
     "port": 7890
 }
-app = Client(session, api_id=api_id, api_hash=api_hash, proxy=proxy)
+app = Client(session, api_id=api_id, api_hash=api_hash)
 
 count_deleted = 0
 running = False
