@@ -48,6 +48,7 @@ async def ban_all(group_id):
 
     if p.privileges.can_restrict_members is False:
         print("您在该群没有ban权限,已跳过!")
+        return
 
     for user_id in deleted_user:
         try:
