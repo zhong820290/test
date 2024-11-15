@@ -48,3 +48,5 @@ async def clean_joined_today(client: Client, message: Message):
         await message.reply(f"已清理{count}")
     except Exception as e:
         await message.reply(f"{e}")
+        
+app.run()
